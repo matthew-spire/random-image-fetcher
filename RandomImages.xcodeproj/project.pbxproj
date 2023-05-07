@@ -15,6 +15,7 @@
 		EC7ACC892A04633500A6C8D6 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7ACC882A04633500A6C8D6 /* ImageViewModel.swift */; };
 		EC7ACC8C2A04697F00A6C8D6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7ACC8B2A04697F00A6C8D6 /* NetworkService.swift */; };
 		EC7ACC8E2A046B3400A6C8D6 /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7ACC8D2A046B3400A6C8D6 /* ImageRepository.swift */; };
+		ECD5BCD52A082C0A0030FFE2 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD5BCD42A082C0A0030FFE2 /* PrimaryButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		EC7ACC882A04633500A6C8D6 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
 		EC7ACC8B2A04697F00A6C8D6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		EC7ACC8D2A046B3400A6C8D6 /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
+		ECD5BCD42A082C0A0030FFE2 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		EC7ACC722A0461EB00A6C8D6 /* RandomImages */ = {
 			isa = PBXGroup;
 			children = (
+				ECD5BCD32A082BE00030FFE2 /* Components */,
 				EC7ACC8A2A04690400A6C8D6 /* Services */,
 				EC7ACC832A04622900A6C8D6 /* Views */,
 				EC7ACC822A04622000A6C8D6 /* ViewModels */,
@@ -101,6 +104,14 @@
 				EC7ACC8D2A046B3400A6C8D6 /* ImageRepository.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		ECD5BCD32A082BE00030FFE2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				ECD5BCD42A082C0A0030FFE2 /* PrimaryButtonStyle.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECD5BCD52A082C0A0030FFE2 /* PrimaryButtonStyle.swift in Sources */,
 				EC7ACC8C2A04697F00A6C8D6 /* NetworkService.swift in Sources */,
 				EC7ACC8E2A046B3400A6C8D6 /* ImageRepository.swift in Sources */,
 				EC7ACC872A0462D900A6C8D6 /* ImageService.swift in Sources */,

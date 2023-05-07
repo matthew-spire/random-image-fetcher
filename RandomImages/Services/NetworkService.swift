@@ -8,10 +8,14 @@
 import Foundation
 
 class NetworkService {
-    func requestData(url: URL, completion: @escaping (Data?, Error?) -> Void) {
+    func requestData(url: URL, completion: @escaping (Result<Data, Error>) -> Void) {
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             DispatchQueue.main.async {
-                completion(data, error)
+                if let data = data {
+                    completion(.success(data))
+                } else if let error = error {
+                    completion(.failure(error))
+                }
             }
         }
 

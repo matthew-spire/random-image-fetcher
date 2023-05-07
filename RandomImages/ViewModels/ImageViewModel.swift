@@ -6,16 +6,34 @@
 //
 
 import SwiftUI
-import Combine
+// import Combine
 
 class ImageViewModel: ObservableObject {
     @Published var image: UIImage?
+    @Published var random: String = ""
+    @Published var imageSize: String = ""
 
-    private var imageRepository = ImageRepository()
+    private var imageRepository: ImageRepository
+    
+    init(imageRepository: ImageRepository = ImageRepository()) {
+        self.imageRepository = imageRepository
+    }
 
-    func fetchImage(random: String, imageSize: Int) {
-        imageRepository.fetchImage(random: random, imageSize: imageSize) { [weak self] image in
-            self?.image = image
+    func fetchImage() {
+        let randomString = random.isEmpty ? "accesso" : random
+
+        guard let imageSizeInt = Int(imageSize) else {
+            print("Invalid image size")
+            return
+        }
+
+        imageRepository.fetchImage(random: randomString, imageSize: imageSizeInt) { [weak self] result in
+            switch result {
+            case .success(let image):
+                self?.image = image
+            case .failure(let error):
+                print("Error fetching image: \(error.localizedDescription)")
+            }
         }
     }
 }
